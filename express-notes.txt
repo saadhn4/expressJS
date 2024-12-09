@@ -90,3 +90,126 @@ now to execute app.js using nodemon; we simply do npm start
 
 2. For users, theyll clone your repostiory, cd repoName, npm i and npm start 
 
+--------------------------------------------------------------------------------------------------------------------------
+
+//Responses (important are json,status and download)
+
+1. res.end()
+2. res.json()
+3. res.download()
+4. res.status()
+5. res.send()
+6. res.redirect()
+
+//res.end() :
+
+res.end() is used to send a response if there is a 1 way communication
+
+Server --------------------------------------------------------------------------------------------> Client
+
+//res.send() :
+
+res.send() is used to send a response if there is a 2 way communication
+
+Server <--------------------------------------------------------------------------------------------> Client
+
+//res.json() :
+
+res.json() is a response method which sends JSON data to client
+
+//res.download() :
+
+res.download() is a response method which is used to download files from web server
+
+//res.status() :
+
+res.status() is a response method which is used to set the status codes.
+
+//res.redirect()
+
+res.redirect()  is a response method which redirects someone to a webpage
+
+-------------------------------------------------------------------------------------------------------------------------
+
+//Protocols VS Status Codes
+
+Protocols are set of rules that govern data communication across networks.
+They ensure data is transmitted accurately, securely and efficiently.
+
+List of proctocols:
+
+1. HTTP (Hypertext Transfer Protocol):
+
+- Used for Web communication
+- Operates on port 80 (HTTP) and 443 (HTTPS)
+- Stateless and request-response module
+
+2. HTTPS (HTTP Secure):
+
+- Secure version of HTTP with SSL/TLS encryption
+- Ensures data integrity, confidentiality and authentication
+
+3. FTP (File Transfer Protocol)
+
+- Ports: 21 (control), 20(data)
+
+4. SMTP (Simple Mail Transfer Protocol)
+
+- Port 25 (unencrypted), 587/465 (secure)
+
+5. IMAP (Internet Message Access Protocol) & POP3 (Post Office Protocol)
+
+- Ports: IMAP 143/993 (secure), POP3 110/995 (secure)
+
+6. DNS (Domain Name System)
+
+- Port: 53
+
+7. DHCP (Dynamic Host Configuration Protocol)
+
+- Ports: 67 (server) , 68 (client)
+
+8. SSH (Secure Shell)
+
+-Port: 22
+
+9. TLS/SSL (Transport Layer Security/Secure Sockets Layer)
+
+- Encrypts communication for secure Data transmission
+
+//HTTP Status Code:
+
+-HTTP status code indicate the response from a web server after receiving a client request.
+
+-100: Continue
+-101: Switching Protocols
+-200: OK
+-201: Created
+-202: Accepted
+-204: No content
+-301: Moved Permanently
+-302: Found
+-304: Not Modified
+-400: Bad request
+-401: Unauthorized
+-403: Forbidden
+-404: Not Found
+-405: Method Not Allowed
+-429: Too Many Requests
+-500: Internal Server Error
+-501: Not Implemented
+-502: Bad Gateway
+-503: Service Unavailable
+-504: Gateway Timeout
+
+Disclaimer: In a single server or a simple app, You can only send one response at a time.
+
+
+
+
+
+
+
+
+
+
