@@ -1,0 +1,92 @@
+Express JS - A framework of Node JS used to build Web Apps and APIs
+
+Express is a popular Node JS Web App framework which provides features such as:
+
+1. fast server side development
+2. middlewares
+3. routing
+4. template engine
+5. debugging
+6. performance
+7. web apps
+
+Express JS makes it easy to handle HTTP requests and responses; allowing devs to create scalable and robust Web Apps
+
+There are several alternatives for Express frameworks ; which are on top of Node JS 
+Several popular options such as :
+
+1. Express.js
+2. KOA.js
+3. HAPI.js
+4. Nest.js 
+5. Fastify.js
+
+The latest version of Express is 4.21.1
+
+How to set up Express:
+
+1. Make sure you have node.js and npm installed ; also make sure both versions are LTS
+LTS version of Node js - v22.12.0 ; Current version - v23.3.0
+
+2. Create a repoistory of your project
+
+3. clone it
+
+4. cd repoName
+
+5. mkdir server && cd server
+
+6. npm init -y 
+
+7. add "type":"module" 
+
+8. touch app.js , .gitignore
+
+9. add node_modules in .gitignore
+
+10. install express (npm i express)
+
+-------------------------------------------------------------------------------------------------------------------------
+
+//Setting up a simple express web server
+
+1. import express from 'express'
+
+2. declare a variable const app = express()
+//to use express, we stored it in a variable
+
+3. declare a variable PORT ; const PORT= 5000
+
+4. Creating an app.get() which has 2 parameters ; routing and arrow function. Inside the arrow function we have 2 parameters also -> req and res. 
+
+5. now inside the arrow function ; create a try catch block
+
+6. in the try block, res.send("Content displayed on web page")
+
+7. Then to actually display the content we use, app.listen() ; It has 2 parameters port number and arrow function. (Port number is stored in variable PORT)
+
+8. in the arrow function, print "Server is up and running at ${PORT}"
+
+-------------------------------------------------------------------------------------------------------------------------
+
+//Nodemon
+
+1. Nodemon is a npm package which automatically restarts if there are any changes in your express server; or the app 
+
+2. To install nodemon, the command is npm i -g nodemon
+
+3. nodemon app.js
+
+4. You dont have to manually ctrl c ; node app again now , If you just reload the page it will make the changes
+
+-------------------------------------------------------------------------------------------------------------------------
+
+//Playing with scripts
+
+1. Script tag is a shortcut to run the apps
+
+in package.json file we replaced the test with "start":"nodemon app.js"
+now to execute app.js using nodemon; we simply do npm start
+
+2. For users, theyll clone your repostiory, cd repoName, npm i and npm start 
+
