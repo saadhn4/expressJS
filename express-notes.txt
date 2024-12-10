@@ -40,6 +40,9 @@ LTS version of Node js - v22.12.0 ; Current version - v23.3.0
 
 7. add "type":"module" 
 
+7.5!!! in package.json file we replaced the test with "start":"nodemon app.js"
+now to execute app.js using nodemon; we simply do npm star
+
 8. touch app.js , .gitignore
 
 9. add node_modules in .gitignore
@@ -204,12 +207,104 @@ List of proctocols:
 
 Disclaimer: In a single server or a simple app, You can only send one response at a time.
 
+--------------------------------------------------------------------------------------------------------------------------
+
+//Express request methods
+
+1. req.body()
+2. req.host()
+3. req.hostname()
+4. req.ip()
+5. req.ips()
+6. req.methods()
+7. req.originalUrl()
+8. req.params()
+9. req.path()
+10. req.query()
+
+--------------------------------------------------------------------------------------------------------------------------
+
+HTTP: Hypertext Transfer Protocol (port: 80)
+
+It is designed to enable communication between client and server
+
+Eg: Client is a browser, we requested google.com and google servers gave us their website
+
+--------------------------Most important backend point ⬇️----------------------------------------------------------------
+
+Every web app, mobile app or website has 4 operations.
+
+Create, Update, Read and Delete.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+HTTP Methods:
+
+1. GET: GET method retreives all the data from the server
+
+2. POST: Creating new data in the server comes under POST method
+
+3. PUT: When you update the existing data, its called PUT
+
+4. DELETE: When you delete the entire data (specific or whole)
 
 
+Every application uses these 4 HTTP methods to make their back end perform well and to work.
+
+Using these 4 methods, they perform change in UI elements
+
+--------------------------------------------------------------------------------------------------------------------------
+
+API (Application Programming Interface) :
+
+Set of rules and proctocols that allow two software components to communicate with each other.
+
+APIs are used to exchange data, perform tasks and interact with other software components
+
+Examples of how APIs are used:
+
+Weather app, Rideshare app, Mobile payment, Smart Fridge, Travel booking site.
+
+Important point: All browsers only accept GET method. 
+--------------------------------------------------------------------------------------------------------------------------
+
+Postman:
+Indian progom global software company that offers an API platform for developers to design, build, test and collab on APIs. 
+
+It is a client side API testing tool.
+
+//collection: It is your project
+
+browsers and postman are your client
+clients make a request to server
+clients make a request to your server API
+server gives response to the client.
 
 
+These API responses are formatted in UI elements (html,css,react)
+--------------------------------------------------------------------------------------------------------------------------
 
+POST Method:
 
+Post method is used to create data in server 
 
+To accept data from client, we use app.use(express.json()) and req.body()
 
+1. declare app.use(express.json()) after the port 
 
+//example:
+app.post("/register", (req, res) => {
+  try {
+    let userInput = req.body;
+    res.status(200).json({ msg: "Succesfully Registered User." });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+then go into postman
+in your folder add new request 
+go into body select raw and make sure its json
+then add your data 
+press send
+it should me whatevers in res.json {its in the form res.status(200).json({"msg":"Registered"})}
