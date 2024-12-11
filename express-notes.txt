@@ -308,3 +308,49 @@ go into body select raw and make sure its json
 then add your data 
 press send
 it should me whatevers in res.json {its in the form res.status(200).json({"msg":"Registered"})}
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Axios in npm: A beginner's guide:
+
+Axios is a popular HTTP client for making requests in JS applications. It simplifies working with APIs by providing a clean interface for sending HTTP requests and handling responses.
+
+It is a popular JS library that allows devs to make HTTP requests to servers or third party sources.
+
+Its a promise based HTTP client that can run in both the browser and node.js
+
+Axios is often used in web dev to:
+
+1. consume and display data from an API
+2. communicate with serverless functions
+3. post, edit and delete from an API
+4. fetch data from APIs
+5. interact with servers
+
+Why use Axios?
+
+1. Ease of use: Simple API for making requests
+2. Promise Based: Working with async/await
+3. Cross platform: Works in browser and Node.js
+4. Automatic data conversion: Converts JSON data automatically
+
+To install Axios:
+npm i axios
+
+Browser - GET request
+Postman and Axios - All HTTP methods (GET, POST, PUT, DELETE)
+
+To access your profile API in GitHub the URL is:
+api.github.com/users/username
+
+!!!!!!!!!!!!!You can only send ONE response in an API.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+How to use Axios:
+axios.js file 
+
+//rate limit exceeded API in GitHub:
+ let response = await axios.get(`https://api.github.com/users/${username}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
