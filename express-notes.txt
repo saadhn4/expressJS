@@ -364,5 +364,5 @@ import dotenv from "dotenv"
 create a .env file in your folder
 inside .env file => API_KEY="{your_api_key}"
 come back to your main file
-dotenv.config
+dotenv.config()
 const token = process.env.API_KEY
