@@ -366,3 +366,7 @@ inside .env file => API_KEY={your_api_key}
 come back to your main file
 dotenv.config()
 const token = process.env.API_KEY
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+whenever im trying post, we ALWAYS USE !!!!!!!!!!!!!app.use(express.json())!!!!!!!!!!!!
