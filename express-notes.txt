@@ -369,4 +369,73 @@ const token = process.env.API_KEY
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-whenever im trying post, we ALWAYS USE !!!!!!!!!!!!!app.use(express.json())!!!!!!!!!!!!
+whenever im trying post, put and delete we ALWAYS USE !!!!!!!!!!!!!app.use(express.json())!!!!!!!!!!!!
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//req.params
+
+req.params (Route Parameters)
+used to captire values from the route URL pattern
+Typically used in dynamic routes where parts of the URL are available
+
+//Using PUT api
+
+app.put("/api/user/:id", (req, res) => {
+  try {
+    let userID = req.params.id;
+    console.log(userID);
+    res.status(200).json(userID);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.get("/link/:website", (req, res) => {
+  try {
+    let userURL = req.params.website;
+    console.log(userURL);
+    res.status(200).redirect(`http://${userURL}`);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+req.query (query parameters)
+
+used to capture query string values in the URL
+commonly used for filtering, sorting and pagination
+
+Differences between req.params and req.query
+
+Purpose: Extracts from URL path ; Extracts from Query String
+Example Format: /users/:userid/posts/:postid ; /search?keyword=express
+Use Case: Identifier, details ; Filtering, searching
+
+Bcrypt:
+Bcrypt.js is a popular JS library used for hashing passwords securely. It uses a one way hashing algorithm to ensure passwords are stored securely, making it almost impossible to reverse the hash back to the original password. It uses a one way hashing algorithm to ensure passwords are stored securely.
+
+Encryption:
+In encryption, we take data and private key. Data is users data, private key is a personalized randomized secret private key (which devs set)
+Encryption = user data + private key = Random text
+
+Decryption:
+
+We have 2 parameters or inputs
+1st parameter: Randomized text from encryption
+2nd parameter: The same private key which we used for encryption
+Decryption = Randomized text + Private key = User data
+
+Hashing:
+In hashing, you take user data and a random shuffle times value (salt) which uses CPU resources and consumption and then gives a random value which is also called a hash value
+
+Hashing = user data + salt value = HASH value
+You cannot dehash. No such thing.
+
+
+
+
+
+
+
+
+
